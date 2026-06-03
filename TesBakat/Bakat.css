@@ -12,12 +12,10 @@ body {
 }
 
 .page {
-    width: 80%;
+    width: 100%;
     min-height: 100vh;
     display: flex;
 }
-
-/* SIDEBAR */
 
 .sidebar {
     width: 390px;
@@ -166,7 +164,7 @@ body {
 /* INTRO CARD */
 
 .intro-card {
-    width: 1050px;
+    width: 100%;
     min-height: 300px;
     border: 1px solid #c9ccd5;
     border-radius: 8px;
