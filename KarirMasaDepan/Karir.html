@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KerjaBro - Peta Karir</title>
+
+    <link rel="stylesheet" href="Karir.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="../assets/iconOrlogo/LogoKerjaBro.png" alt="Logo">
+            <h1>KerjaBro<span>.</span></h1>
+        </div>
+
+        <p class="tagline">Kenali dirimu, Raih masa depanmu</p>
+
+        <nav>
+            <a href="../HomeScreen/Home.html"><i class="fa-solid fa-house"></i> Beranda</a>
+            <a href="#"><i class="fa-regular fa-heart"></i> Tes Minat</a>
+            <a href="#"><i class="fa-regular fa-star"></i> Tes Bakat</a>
+            <a href="#"><i class="fa-solid fa-book-open"></i> Kemampuan</a>
+            <a href="#" class="active"><i class="fa-solid fa-map-location-dot"></i> Peta Karir</a>
+            <a href="#"><i class="fa-solid fa-map-location"></i> Rekomendasi Tempat Kerja</a>
+        </nav>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <main class="main">
+        <header>
+            <button class="menu-btn" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="title">
+                <h1>Peta Karier Masa Depanku <i class="fa-solid fa-map-location-dot"></i></h1>
+                <p>Kami menggabungkan hasil Minat, Bakat, dan Kemampuanmu<br>untuk menemukan karier yang paling cocok untukmu.</p>
+            </div>
+
+            <div class="top-icons">
+                <i class="fa-regular fa-bell"></i>
+                <div class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+        </header>
+
+        <section class="top-area">
+            <div class="summary-cards">
+                <div class="summary-card orange">
+                    <div class="summary-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Minat</h3>
+                    <p>Seni Digital, Desain,<br>Teknologi</p>
+                    <span>Skor: Tinggi</span>
+                </div>
+
+                <div class="summary-card purple">
+                    <div class="summary-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Bakat</h3>
+                    <p>Pemecahan Masalah,<br>Kreativitas</p>
+                    <span>Skor: Kuat</span>
+                </div>
+
+                <div class="summary-card blue">
+                    <div class="summary-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Kemampuan</h3>
+                    <p>Figma (Menengah),<br>Desain UI, Komunikasi</p>
+                    <span>Level: Menengah</span>
+                </div>
+            </div>
+
+            <img src="../assets/image/CareerIlustrasi.png" class="career-hero" alt="Career Illustration">
+        </section>
+
+        <section class="main-content">
+            <div class="recommendation-card">
+                <h2>Rekomendasi Terbaik untukmu</h2>
+
+                <div class="recommendation-content">
+                    <div class="career-illustration">
+                        <div class="number">1</div>
+                        <i class="fa-solid fa-desktop"></i>
+                        <div class="figma">F</div>
+                    </div>
+
+                    <div class="career-detail">
+                        <div class="career-head">
+                            <h1>UI/UX Designer</h1>
+                            <span>Kecocokan 92%</span>
+                        </div>
+
+                        <p>Kamu cocok jadi UI/UX Designer karena minatmu di seni digital tinggi, bakatmu di pemecahan masalah kuat, dan kemampuan Figmamu sudah di level menengah.</p>
+
+                        <div class="labels">
+                            <span><i class="fa-solid fa-heart"></i> Minat: Tinggi</span>
+                            <span><i class="fa-solid fa-star"></i> Bakat: Kuat</span>
+                            <span><i class="fa-solid fa-briefcase"></i> Kemampuan: Menengah</span>
+                        </div>
+
+                        <div class="info-boxes">
+                            <div class="info-box">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                <p><b>Jenjang Karier</b><br>Junior Designer → Designer<br>→ Senior Designer</p>
+                            </div>
+
+                            <div class="info-box">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                <p><b>Outlook Pekerjaan</b><br><strong>Sangat Cerah</strong><br>Pertumbuhan 15% (5 thn)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="salary-card">
+                    <div class="money-icon">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <div>
+                        <h3>Gaji Rata-rata</h3>
+                        <p>Perkiraan di Indonesia</p>
+                        <h2>Rp 8.000.000 <span>/ bulan</span></h2>
+                    </div>
+                    <i class="fa-solid fa-arrow-trend-up salary-chart"></i>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-bullseye"></i> Skill yang Perlu Dikembangkan</h3>
+
+                    <div class="skill-row">
+                        <p><i class="fa-solid fa-star"></i> User Research</p>
+                        <span>Pemula</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <p><i class="fa-solid fa-star"></i> Prototyping</p>
+                        <span>Pemula</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <p><i class="fa-solid fa-star"></i> Design System</p>
+                        <span>Pemula</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <p><i class="fa-solid fa-star"></i> HTML & CSS Dasar</p>
+                        <span class="basic">Dasar</span>
+                    </div>
+
+                    <button>Lihat Rekomendasi Belajar <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="other-section">
+            <h2>Karier Lain yang Cocok untukmu</h2>
+
+            <div class="other-grid">
+                <div class="other-card">
+                    <b>2</b>
+                    <div class="other-icon code"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h3>Front-end Developer</h3>
+                        <span>Kecocokan 85%</span>
+                        <p>Rp 7.000.000 / bulan</p>
+                    </div>
+                </div>
+
+                <div class="other-card">
+                    <b>3</b>
+                    <div class="other-icon product"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div>
+                        <h3>Product Designer</h3>
+                        <span>Kecocokan 78%</span>
+                        <p>Rp 9.000.000 / bulan</p>
+                    </div>
+                </div>
+
+                <div class="other-card">
+                    <b>4</b>
+                    <div class="other-icon marketing"><i class="fa-solid fa-chart-simple"></i></div>
+                    <div>
+                        <h3>Digital Marketing Specialist</h3>
+                        <span>Kecocokan 72%</span>
+                        <p>Rp 6.000.000 / bulan</p>
+                    </div>
+                </div>
+
+                <div class="see-all">
+                    <p>Lihat semua<br>karier</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="Career.js"></script>
+</body>
+</html>
