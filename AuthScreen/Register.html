@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KerjaBro - Sign Up</title>
+
+    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <img src="../assets/iconOrlogo/LogoKerjaBro.png" alt="KerjaBro Logo">
+                <h1>KerjaBro<span>.</span></h1>
+            </div>
+
+            <div class="form-box">
+                <h2>Sign Up</h2>
+                <p>Buat akun yuk bro dan dapatkan arah<br>yang benar tanpa tersesat.</p>
+
+                <div class="input-group">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <input type="text" id="username" placeholder="Username">
+                </div>
+                <small id="usernameError" class="error"></small>
+
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <small id="emailError" class="error"></small>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <small id="passwordError" class="error"></small>
+
+                <label class="terms">
+                    <input type="checkbox" id="terms">
+                    <span>Saya setuju dengan syarat dan ketentuan yang berlaku</span>
+                </label>
+                <small id="termsError" class="error terms-error"></small>
+
+                <button type="button" onclick="register()">Daftar</button>
+
+                <p class="login-text">
+                    Sudah punya akun? <a href="Login.html">Masuk disini</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="../assets/image/LoginIlustrasi.png" class="illustration" alt="Register Illustration">
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

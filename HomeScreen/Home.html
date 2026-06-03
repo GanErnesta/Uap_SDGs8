@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KerjaBro - Beranda</title>
+
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="../assets/iconOrlogo/LogoKerjaBro.png" alt="Logo">
+            <h1>KerjaBro<span>.</span></h1>
+        </div>
+
+        <p class="tagline">Kenali dirimu, Raih masa depanmu</p>
+
+        <nav>
+            <a href="#" class="active"><i class="fa-solid fa-house"></i> Beranda</a>
+            <a href="#"><i class="fa-regular fa-heart"></i> Tes Minat</a>
+            <a href="#"><i class="fa-regular fa-star"></i> Tes Bakat</a>
+            <a href="#"><i class="fa-solid fa-book-open"></i> Kemampuan</a>
+            <a href="#"><i class="fa-solid fa-map-location-dot"></i> Peta Karir</a>
+            <a href="#"><i class="fa-solid fa-map-location"></i> Rekomendasi Tempat Kerja</a>
+        </nav>
+
+        <div class="profile">
+            <img src="https://i.pravatar.cc/80?img=12">
+            <div>
+                <h4>Rifqi Ananda</h4>
+                <p>rifqi.ananda@gmail.com</p>
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <main class="main">
+        <header>
+            <button class="menu-btn" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <h2>Beranda</h2>
+
+            <div class="search">
+                <input type="text" placeholder="Cari pekerjaan atau jurusan...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="top-icons">
+                <div class="bell">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+                <div class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <h1>Hai, Gana! 👋</h1>
+                <p>Temukan arah karirmu dan<br>percaya pada potensi dirimu.<br>Masa depan cerah dimulai dari langkah kecil hari ini.</p>
+                <button>Mulai Eksplorasi <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <img src="../assets/image/HomeIlustrasi.png" alt="Hero">
+        </section>
+
+        <section class="stats">
+            <div class="stat-card blue">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <div>
+                    <h4>Tes Minat</h4>
+                    <h3>2</h3>
+                    <p>Selesai</p>
+                </div>
+            </div>
+
+            <div class="stat-card green">
+                <i class="fa-solid fa-star"></i>
+                <div>
+                    <h4>Tes Bakat</h4>
+                    <h3>1</h3>
+                    <p>Selesai</p>
+                </div>
+            </div>
+
+            <div class="stat-card yellow">
+                <i class="fa-solid fa-book-open"></i>
+                <div>
+                    <h4>Kemampuan</h4>
+                    <h3>4</h3>
+                    <p>Dipelajari</p>
+                </div>
+            </div>
+
+            <div class="stat-card purple">
+                <i class="fa-solid fa-map"></i>
+                <div>
+                    <h4>Peta Karir</h4>
+                    <h3>3</h3>
+                    <p>Jalur tersedia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <h3>Rekomendasi Karir Untukmu</h3>
+            <a href="#">Lihat semua</a>
+        </section>
+
+        <section class="career-grid">
+            <div class="career-card">
+                <div class="icon blue"><i class="fa-solid fa-code"></i></div>
+                <h4>Software Developer</h4>
+                <span>Teknologi</span>
+                <p>Membuat dan mengembangkan aplikasi perangkat lunak.</p>
+                <a href="#">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="career-card">
+                <div class="icon green"><i class="fa-solid fa-pen-nib"></i></div>
+                <h4>UI/UX Designer</h4>
+                <span>Desain</span>
+                <p>Merancang tampilan dan pengalaman pengguna yang menarik.</p>
+                <a href="#">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="career-card">
+                <div class="icon purple"><i class="fa-solid fa-bullhorn"></i></div>
+                <h4>Digital Marketer</h4>
+                <span>Marketing</span>
+                <p>Mempromosikan produk atau jasa melalui media digital.</p>
+                <a href="#">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="career-card">
+                <div class="icon orange"><i class="fa-solid fa-chart-simple"></i></div>
+                <h4>Data Analyst</h4>
+                <span>Data</span>
+                <p>Menganalisis data untuk membantu pengambilan keputusan.</p>
+                <a href="#">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <h3>Artikel & Tips Karir</h3>
+            <a href="#">Lihat semua</a>
+        </section>
+
+        <section class="articles">
+            <div class="article-card">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=300">
+                <div>
+                    <h4>Cara Menentukan Karir yang Tepat</h4>
+                    <p><i class="fa-regular fa-calendar"></i> 12 Mei 2024</p>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300">
+                <div>
+                    <h4>Skill Penting di Dunia Kerja 2024</h4>
+                    <p><i class="fa-regular fa-calendar"></i> 10 Mei 2024</p>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300">
+                <div>
+                    <h4>Tips Membangun Karir dari Nol</h4>
+                    <p><i class="fa-regular fa-calendar"></i> 8 Mei 2024</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="Home.js"></script>
+</body>
+</html>
