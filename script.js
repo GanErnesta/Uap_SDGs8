@@ -147,3 +147,21 @@ function login() {
 
     window.location.href = "../HomeScreen/Home.html";
 }
+const menuItems = document.querySelectorAll(".menu a");
+const startBtn = document.getElementById("startBtn");
+
+menuItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        menuItems.forEach(menu => {
+            menu.classList.remove("active");
+        });
+
+        this.classList.add("active");
+    });
+});
+
+startBtn.addEventListener("click", function () {
+    alert("Simulasi Tes Bakat dimulai!");
+});
