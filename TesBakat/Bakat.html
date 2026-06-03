@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +8,32 @@
     <link rel="stylesheet" href="Bakat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<div class="page">
-
-    <aside class="sidebar">
-        <div class="brand">
-            <div class="brand-logo">
-                <img src="logo.png" alt="KerjaBro">
-                <h2>KerjaBro.</h2>
-            </div>
-            <p>Kenali dirimu, Raih masa depanmu</p>
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="../assets/iconOrlogo/LogoKerjaBro.png" alt="KerjaBro">
+            <h1>KerjaBro.</h1>
         </div>
 
-        <nav class="menu">
-            <a href="#">
-                <i class="fa-regular fa-house"></i>
-                <span>Beranda</span>
-            </a>
+        <p class="tagline">Kenali dirimu, Raih masa depanmu</p>
 
-            <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <span>Tes Minat</span>
-            </a>
-
-            <a href="#" class="active">
-                <i class="fa-regular fa-star"></i>
-                <span>Tes Bakat</span>
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-book-open"></i>
-                <span>Kemampuan</span>
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-map-location-dot"></i>
-                <span>Peta Karir</span>
-            </a>
-
-            <a href="#">
-                <i class="fa-regular fa-map"></i>
-                <span>Rekomendasi Tempat Kerja</span>
-            </a>
+        <nav>
+            <a href="#"><i class="fa-regular fa-house"></i>Beranda</a>
+            <a href="#"><i class="fa-regular fa-heart"></i>Tes Minat</a>
+            <a href="#" class="active"><i class="fa-regular fa-star"></i>Tes Bakat</a>
+            <a href="#"><i class="fa-solid fa-book-open"></i>Kemampuan</a>
+            <a href="#"><i class="fa-solid fa-map-location-dot"></i>Peta Karir</a>
+            <a href="#"><i class="fa-regular fa-map"></i>Rekomendasi Tempat Kerja</a>
         </nav>
     </aside>
 
-    <main class="content">
-        <section class="header">
-            <h1>Mengenali Bakat</h1>
-            <p>Temukan potensi alammu melalui simulasi masalah sehari-hari.</p>
-        </section>
+    <main class="page-home" id="homePage">
+        <h1>Mengenali Bakat</h1>
+        <p class="subtitle">Temukan potensi alammu melalui simulasi masalah sehari-hari.</p>
 
-        <section class="info-wrapper">
+        <div class="info-row">
             <div class="info-card">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <div>
@@ -76,29 +50,25 @@
                 </div>
             </div>
 
-            <div class="info-card wide">
+            <div class="info-card">
                 <i class="fa-solid fa-brain"></i>
                 <div>
                     <h3>Ai analisis</h3>
                     <p>Menilai cara<br>berpikir kamu</p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section class="intro-card">
-            <div>
-                <h2>Apa itu Mengenali Bakat?</h2>
-                <p>
-                    Kami memberikan kamu berbagai skenario masalah. Pilihan
-                    keputusan yang kamu ambil akan membantu sistem
-                    mengidentifikasi bakat alami yang mungkin belum kamu sadari.
-                </p>
+            <h2>Apa itu Mengenali Bakat?</h2>
+            <p>
+                Kami memberikan kamu berbagai skenario masalah. Pilihan keputusan yang kamu ambil
+                akan membantu sistem mengidentifikasi bakat alami yang mungkin belum kamu sadari.
+            </p>
 
-                <button id="startBtn">
-                    Mulai Simulasi
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
+            <button onclick="mulaiSimulasi()">
+                Mulai Simulasi <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </section>
 
         <section class="talent-section">
@@ -106,41 +76,77 @@
             <p>Berbagai dimensi kemampuan profesional yang diukur.</p>
 
             <div class="talent-grid">
-                <div class="talent-card">
-                    <div class="icon-circle"><i class="fa-regular fa-star"></i></div>
-                    <h4>Leadership</h4>
+                <div class="talent-card"><span><i class="fa-regular fa-star"></i></span>
+                    <p>Leadership</p>
                 </div>
-
-                <div class="talent-card">
-                    <div class="icon-circle"><i class="fa-solid fa-puzzle-piece"></i></div>
-                    <h4>Problem<br>Solving</h4>
+                <div class="talent-card"><span><i class="fa-solid fa-puzzle-piece"></i></span>
+                    <p>Problem<br>Solving</p>
                 </div>
-
-                <div class="talent-card">
-                    <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
-                    <h4>Management</h4>
+                <div class="talent-card"><span><i class="fa-solid fa-users"></i></span>
+                    <p>Management</p>
                 </div>
-
-                <div class="talent-card">
-                    <div class="icon-circle"><i class="fa-solid fa-palette"></i></div>
-                    <h4>Creativity</h4>
+                <div class="talent-card"><span><i class="fa-solid fa-palette"></i></span>
+                    <p>Creativity</p>
                 </div>
-
-                <div class="talent-card">
-                    <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
-                    <h4>Analytical<br>Thinking</h4>
+                <div class="talent-card"><span><i class="fa-solid fa-chart-line"></i></span>
+                    <p>Analytical<br>Thinking</p>
                 </div>
-
-                <div class="talent-card">
-                    <div class="icon-circle"><i class="fa-regular fa-message"></i></div>
-                    <h4>Communication</h4>
+                <div class="talent-card"><span><i class="fa-regular fa-message"></i></span>
+                    <p>Communication</p>
                 </div>
             </div>
         </section>
     </main>
 
-</div>
+    <main class="simulation-page hidden" id="simulationPage">
+        <div class="sim-header">
+            <button onclick="kembaliHome()" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h1>Simulasi Bakat</h1>
+            <div class="timer">
+                <i class="fa-solid fa-stopwatch"></i>
+                <span id="timerText">18:44</span>
+            </div>
+        </div>
 
-<script src="script.js"></script>
+        <p class="scenario-count">Skenario <b id="currentNumber">1</b> dari 9</p>
+
+        <div class="progress-bar" id="progressBar"></div>
+
+        <section class="scenario-card" id="soalSimulasi">
+            <div class="scenario-text">
+                <h4><i class="fa-solid fa-users"></i> SOCIAL DYNAMICS</h4>
+                <h2 id="questionTitle">Konflik dalam Tim Proyek</h2>
+                <p id="questionDesc">
+                    Kamu sedang mengerjakan proyek kelompok. Dua temanmu berdebat karena tidak setuju
+                    tentang cara mengerjakan tugas. Suasana tim mulai tegang dan pekerjaan jadi tertunda.
+                    Sebagai bagian dari tim, bagaimana langkah kamu?
+                </p>
+
+                <div class="note">
+                    <span>...</span>
+                    <em>Situasi melibatkan 3+ orang</em>
+                </div>
+            </div>
+
+            <div class="scenario-image">
+                <img src="https://i.ibb.co.com/qxPVv2Y/group-discussion.png" alt="Simulasi">
+            </div>
+        </section>
+
+        <h2 class="answer-title">Apa yang akan kamu lakukan?</h2>
+
+        <section class="answer-grid" id="answerGrid"></section>
+
+        <div class="bottom-action">
+            <p>Otomatis simpan draf...</p>
+            <button onclick="nextQuestion()">Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </main>
+
+
+    <script src="../script.js"></script>
 </body>
+
 </html>

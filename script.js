@@ -146,23 +146,129 @@ function login() {
     if (!isValid) return;
 
     window.location.href = "../HomeScreen/Home.html";
-}
-const menuLinks = document.querySelectorAll(".menu a");
+} 
+const homePage = document.getElementById("homePage");
+const simulationPage = document.getElementById("simulationPage");
+const sidebar = document.getElementById("sidebar");
+const answerGrid = document.getElementById("answerGrid");
+const progressBar = document.getElementById("progressBar");
+const currentNumber = document.getElementById("currentNumber");
+const questionTitle = document.getElementById("questionTitle");
+const questionDesc = document.getElementById("questionDesc");
 
-menuLinks.forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
+let currentIndex = 0;
+let answers = [];
 
-    menuLinks.forEach(item => item.classList.remove("active"));
-    this.classList.add("active");
+const questions = [
+  {
+    title: "Konflik dalam Tim Proyek",
+    desc: "Kamu sedang mengerjakan proyek kelompok. Dua temanmu berdebat karena tidak setuju tentang cara mengerjakan tugas. Suasana tim mulai tegang dan pekerjaan jadi tertunda. Sebagai bagian dari tim, bagaimana langkah kamu?",
+    options: [
+      "Memisahkan mereka dan mendengarkan pendapat masing-masing secara objektif.",
+      "Menyuruh mereka fokus ke tugas masing-masing saja, jangan banyak debat.",
+      "Menyusun ulang pembagian tugas agar lebih adil dan jelas bagi semua pihak.",
+      "Mencoba mencairkan suasana dengan bercanda agar ketegangan tim berkurang."
+    ]
+  },
+  {
+    title: "Deadline Tugas Mendadak",
+    desc: "Guru memberi tugas kelompok dengan waktu yang sangat singkat. Beberapa anggota terlihat panik dan tidak tahu harus mulai dari mana. Apa yang kamu lakukan?",
+    options: [
+      "Membagi tugas kecil agar semua bisa langsung bergerak.",
+      "Mengerjakan bagian tersulit sendiri agar cepat selesai.",
+      "Mengajak semua berdiskusi dulu sampai semua setuju.",
+      "Menunggu teman lain memberi arahan terlebih dahulu."
+    ]
+  },
+  {
+    title: "Ide Ditolak Teman",
+    desc: "Kamu memberikan ide dalam diskusi, tetapi teman-temanmu kurang setuju. Mereka memilih ide lain yang menurutmu kurang efektif. Apa tindakanmu?",
+    options: [
+      "Menerima keputusan dan tetap membantu tim.",
+      "Menjelaskan kembali idemu dengan alasan yang lebih jelas.",
+      "Diam saja karena pendapatmu sudah ditolak.",
+      "Mencoba menggabungkan idemu dengan ide teman."
+    ]
+  }
+];
+
+function mulaiSimulasi() {
+  homePage.classList.add("hidden");
+  sidebar.classList.add("hidden");
+  simulationPage.classList.remove("hidden");
+  renderQuestion();
+
+  document.getElementById("soalSimulasi").scrollIntoView({
+    behavior: "smooth"
   });
+}
+
+function kembaliHome() {
+  simulationPage.classList.add("hidden");
+  homePage.classList.remove("hidden");
+  sidebar.classList.remove("hidden");
+}
+
+function renderQuestion() {
+  const question = questions[currentIndex];
+
+  currentNumber.textContent = currentIndex + 1;
+  questionTitle.textContent = question.title;
+  questionDesc.textContent = question.desc;
+
+  progressBar.innerHTML = "";
+  for (let i = 0; i < 9; i++) {
+    const bar = document.createElement("span");
+    if (i <= currentIndex) bar.classList.add("active");
+    progressBar.appendChild(bar);
+  }
+
+  answerGrid.innerHTML = "";
+  question.options.forEach((option, index) => {
+    const card = document.createElement("div");
+    card.className = "answer-card";
+
+    card.innerHTML = `
+      <b>${String.fromCharCode(65 + index)}</b>
+      <p>${option}</p>
+    `;
+
+    card.onclick = () => {
+      document.querySelectorAll(".answer-card").forEach(item => {
+        item.classList.remove("selected");
+      });
+
+      card.classList.add("selected");
+      answers[currentIndex] = option;
+    };
+
+    answerGrid.appendChild(card);
+  });
+}
+
+function nextQuestion() {
+  if (!answers[currentIndex]) {
+    alert("Pilih salah satu jawaban dulu.");
+    return;
+  }
+
+  if (currentIndex < questions.length - 1) {
+    currentIndex++;
+    renderQuestion();
+  } else {
+    alert("Simulasi selesai! Jawaban kamu berhasil disimpan.");
+  }
+}
+const btnMulai = document.getElementById("btnMulai");
+const home = document.getElementById("homePage");
+const simulation = document.getElementById("simulationPage");
+
+btnMulai.addEventListener("click", function () {
+  homePage.classList.add("hidden");
+  sidebar.classList.add("hidden");
+  simulationPage.classList.remove("hidden");
 });
 
-const exploreBtn = document.querySelector(".hero-text button");
-
-exploreBtn.addEventListener("click", function() {
-  alert("Mulai eksplorasi karir!");
-});
 const menuItems = document.querySelectorAll(".menu a");
 const filterButtons = document.querySelectorAll(".filter-row button");
 const saveButtons = document.querySelectorAll(".save");
