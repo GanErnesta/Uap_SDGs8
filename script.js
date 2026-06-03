@@ -147,3 +147,86 @@ function login() {
 
     window.location.href = "../HomeScreen/Home.html";
 }
+const menuLinks = document.querySelectorAll(".menu a");
+
+menuLinks.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    menuLinks.forEach(item => item.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+const exploreBtn = document.querySelector(".hero-text button");
+
+exploreBtn.addEventListener("click", function() {
+  alert("Mulai eksplorasi karir!");
+});
+const menuItems = document.querySelectorAll(".menu a");
+const filterButtons = document.querySelectorAll(".filter-row button");
+const saveButtons = document.querySelectorAll(".save");
+const applyButtons = document.querySelectorAll(".actions button:first-child");
+
+menuItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        menuItems.forEach(menu => menu.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const row = this.parentElement;
+        row.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+
+saveButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const icon = this.querySelector("i");
+        icon.classList.toggle("fa-regular");
+        icon.classList.toggle("fa-solid");
+        this.classList.toggle("saved");
+    });
+});
+
+applyButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        alert("Lamaran berhasil diproses!");
+    });
+});
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll("nav a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+        link.classList.add("active");
+    }
+});
+const modal = document.getElementById("modalLamaran");
+const jobText = document.getElementById("jobText");
+
+function bukaModal(namaLowongan) {
+  jobText.textContent = `Kamu akan melamar sebagai ${namaLowongan}.`;
+  modal.classList.add("active");
+}
+
+function tutupModal() {
+  modal.classList.remove("active");
+}
+
+function kirimLamaran() {
+  alert("Lamaran berhasil dikirim!");
+  tutupModal();
+}
+
+window.onclick = function(e) {
+  if (e.target === modal) {
+    tutupModal();
+  }
+};
