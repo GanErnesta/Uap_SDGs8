@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KerjaBro - Tes Bakat</title>
+    <link rel="stylesheet" href="Bakat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    ini bakatdasfsdd
+
+<div class="page">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-logo">
+                <img src="logo.png" alt="KerjaBro">
+                <h2>KerjaBro.</h2>
+            </div>
+            <p>Kenali dirimu, Raih masa depanmu</p>
+        </div>
+
+        <nav class="menu">
+            <a href="#">
+                <i class="fa-regular fa-house"></i>
+                <span>Beranda</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-heart"></i>
+                <span>Tes Minat</span>
+            </a>
+
+            <a href="#" class="active">
+                <i class="fa-regular fa-star"></i>
+                <span>Tes Bakat</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Kemampuan</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Peta Karir</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-map"></i>
+                <span>Rekomendasi Tempat Kerja</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <section class="header">
+            <h1>Mengenali Bakat</h1>
+            <p>Temukan potensi alammu melalui simulasi masalah sehari-hari.</p>
+        </section>
+
+        <section class="info-wrapper">
+            <div class="info-card">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <div>
+                    <h3>9</h3>
+                    <p>Skenario<br>tersedia</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <h3>20 mnt</h3>
+                    <p>Durasi<br>Simulasi</p>
+                </div>
+            </div>
+
+            <div class="info-card wide">
+                <i class="fa-solid fa-brain"></i>
+                <div>
+                    <h3>Ai analisis</h3>
+                    <p>Menilai cara<br>berpikir kamu</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-card">
+            <div>
+                <h2>Apa itu Mengenali Bakat?</h2>
+                <p>
+                    Kami memberikan kamu berbagai skenario masalah. Pilihan
+                    keputusan yang kamu ambil akan membantu sistem
+                    mengidentifikasi bakat alami yang mungkin belum kamu sadari.
+                </p>
+
+                <button id="startBtn">
+                    Mulai Simulasi
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="talent-section">
+            <h2>Contoh Bakat yang Bisa Ditemukan</h2>
+            <p>Berbagai dimensi kemampuan profesional yang diukur.</p>
+
+            <div class="talent-grid">
+                <div class="talent-card">
+                    <div class="icon-circle"><i class="fa-regular fa-star"></i></div>
+                    <h4>Leadership</h4>
+                </div>
+
+                <div class="talent-card">
+                    <div class="icon-circle"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <h4>Problem<br>Solving</h4>
+                </div>
+
+                <div class="talent-card">
+                    <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
+                    <h4>Management</h4>
+                </div>
+
+                <div class="talent-card">
+                    <div class="icon-circle"><i class="fa-solid fa-palette"></i></div>
+                    <h4>Creativity</h4>
+                </div>
+
+                <div class="talent-card">
+                    <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>Analytical<br>Thinking</h4>
+                </div>
+
+                <div class="talent-card">
+                    <div class="icon-circle"><i class="fa-regular fa-message"></i></div>
+                    <h4>Communication</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
